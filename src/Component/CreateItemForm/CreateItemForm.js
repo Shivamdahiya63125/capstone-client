@@ -36,8 +36,10 @@ const CreateItemForm = (props) => {
       body: itemFormData,
       // body: JSON.stringify({ _id: globalUser._id, itemDetail: itemDetail }),
     };
-
-    await fetch("http://localhost:8080/listing/addlisting", requestOptions)
+    await fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/listing/addlisting`,
+      requestOptions
+    )
       .then((response) => {
         return response.json();
       })

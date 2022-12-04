@@ -27,7 +27,10 @@ const Login = (props) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(user),
       };
-      await fetch("http://localhost:8080/users/login", requestOptions)
+      await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/users/login`,
+        requestOptions
+      )
         .then((response) => {
           console.log(response);
 
