@@ -11,7 +11,10 @@ const ProductListing = () => {
       mode: "cors",
       method: "GET",
     };
-    await fetch("http://localhost:8080/listing/getalllisting", requestOptions)
+    await fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/listing/getalllisting`,
+      requestOptions
+    )
       .then((response) => {
         return response.json();
       })
