@@ -96,7 +96,10 @@ const CreateItemForm = (props) => {
       body: itemFormData,
     };
 
-    await fetch("http://localhost:8080/listing/updateItem", requestOptions)
+    await fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/listing/updateItem`,
+      requestOptions
+    )
       .then((response) => {
         return response.json();
       })

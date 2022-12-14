@@ -35,7 +35,7 @@ const SellingPageItemCard = (props) => {
         method: "DELETE",
       };
       await fetch(
-        `http://localhost:8080/listing/deletelisting/${_id}`,
+        `${process.env.REACT_APP_BACKEND_URL}/listing/deletelisting/${_id}`,
         requestOptions
       )
         .then((response) => {
