@@ -55,7 +55,10 @@ const PaymentForm = (props) => {
             userId: userId,
           }),
         };
-        await fetch("http://localhost:8080/payment", requestOptions)
+        await fetch(
+          `${process.env.REACT_APP_BACKEND_URL}/payment`,
+          requestOptions
+        )
           .then((response) => {
             console.log(response);
 
