@@ -12,7 +12,7 @@ const ProductListing = () => {
       method: "GET",
     };
     await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/listing/getalllisting`,
+      "http://13.58.147.80:8080/listing/getalllisting",
       requestOptions
     )
       .then((response) => {

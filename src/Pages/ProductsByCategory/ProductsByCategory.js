@@ -19,7 +19,7 @@ const ProductsByCategory = () => {
       method: "GET",
     };
     await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/category/${params.categoryType}`,
+      `http://localhost:8080/listing/category/${params.categoryType}`,
       requestOptions
     )
       .then((response) => {

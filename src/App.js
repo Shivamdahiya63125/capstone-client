@@ -22,6 +22,7 @@ import Messenger from "./Pages/Messenger/Messenger";
 import DraftedItems from "./Pages/DraftedItems/DraftedItems";
 import Favorites from "./Pages/Favorites/Favorites";
 import AboutUs from "./Pages/AboutUs/AboutUs";
+import StripeContainer from "./Pages/Stripe/StripeContainer";
 
 function App() {
   const [isUserLoggedIn, setisUserLoggedIn] = useState(
@@ -132,6 +133,28 @@ function App() {
             <Route exact path="/edit/:draftId">
               <CreateListing edit={true}></CreateListing>
             </Route>
+
+            <Route exact path="/buy/product/stripeForm">
+              <StripeContainer></StripeContainer>
+            </Route>
+
+            <Route
+              path="/projectlink/gitlink"
+              component={() => {
+                window.location.href =
+                  "https://github.com/Shivamdahiya63125/capstoneProject";
+                return null;
+              }}
+            />
+
+            <Route
+              path="/projectlink/livelink"
+              component={() => {
+                window.location.href =
+                  "https://capstone-client-b1q59y1a6-shivamdahiya63125.vercel.app/";
+                return null;
+              }}
+            />
           </Switch>
         </div>
       </UserProvider>

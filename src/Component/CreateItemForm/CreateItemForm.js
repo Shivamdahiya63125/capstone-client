@@ -36,10 +36,8 @@ const CreateItemForm = (props) => {
       body: itemFormData,
       // body: JSON.stringify({ _id: globalUser._id, itemDetail: itemDetail }),
     };
-    await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/listing/addlisting`,
-      requestOptions
-    )
+
+    await fetch("http://localhost:8080/listing/addlisting", requestOptions)
       .then((response) => {
         return response.json();
       })
@@ -96,10 +94,7 @@ const CreateItemForm = (props) => {
       body: itemFormData,
     };
 
-    await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/listing/updateItem`,
-      requestOptions
-    )
+    await fetch("http://localhost:8080/listing/updateItem", requestOptions)
       .then((response) => {
         return response.json();
       })

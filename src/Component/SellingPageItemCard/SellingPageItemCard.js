@@ -35,7 +35,7 @@ const SellingPageItemCard = (props) => {
         method: "DELETE",
       };
       await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/listing/deletelisting/${_id}`,
+        `http://localhost:8080/listing/deletelisting/${_id}`,
         requestOptions
       )
         .then((response) => {
@@ -62,7 +62,7 @@ const SellingPageItemCard = (props) => {
         method: "GET",
       };
       await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/listing/item/sold/${_id}`,
+        `http://localhost:8080/listing/item/sold/${_id}`,
         requestOptions
       )
         .then((response) => {
@@ -89,7 +89,7 @@ const SellingPageItemCard = (props) => {
         method: "GET",
       };
       await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/listing/item/repost/${_id}`,
+        `http://localhost:8080/listing/item/repost/${_id}`,
         requestOptions
       )
         .then((response) => {

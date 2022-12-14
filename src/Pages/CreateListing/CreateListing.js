@@ -31,7 +31,7 @@ const CreateListing = (props) => {
       method: "GET",
     };
     await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/listing/${params.draftId}/"null"`,
+      `http://localhost:8080/listing/${params.draftId}/"null"`,
       requestOptions
     )
       .then((response) => {

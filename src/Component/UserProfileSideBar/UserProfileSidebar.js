@@ -26,10 +26,7 @@ const UserProfileSidebar = () => {
       body: formData,
     };
 
-    await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/users/uploadAvatar`,
-      requestOptions
-    )
+    await fetch("http://localhost:8080/users/uploadAvatar", requestOptions)
       .then((response) => {
         return response.json();
       })

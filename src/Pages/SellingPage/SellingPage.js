@@ -16,7 +16,7 @@ const SellingPage = () => {
       method: "GET",
     };
     await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/users/${globalUser._id}/getuserlisting/`,
+      `http://localhost:8080/users/${globalUser._id}/getuserlisting/`,
       requestOptions
     )
       .then((response) => {
