@@ -16,7 +16,7 @@ const Favorites = () => {
       method: "GET",
     };
     await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/${globalUser._id}/getfavorites`,
+      `${process.env.REACT_APP_BACKEND_URL}/users/${globalUser._id}/getfavorites`,
       requestOptions
     )
       .then((response) => {

@@ -19,7 +19,7 @@ const ProductsByCategory = () => {
       method: "GET",
     };
     await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/${params.categoryType}`,
+      `${process.env.REACT_APP_BACKEND_URL}/category/${params.categoryType}`,
       requestOptions
     )
       .then((response) => {
