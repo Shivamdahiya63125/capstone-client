@@ -23,7 +23,7 @@ const Messenger = ({ conversationId }) => {
       method: "GET",
     };
     await fetch(
-      `http://localhost:8080/conversation/${globalUser._id}`,
+      `${process.env.REACT_APP_BACKEND_URL}/conversation/${globalUser._id}`,
       requestOptions
     )
       .then((response) => {
@@ -53,7 +53,7 @@ const Messenger = ({ conversationId }) => {
 
     try {
       await fetch(
-        `http://localhost:8080/users/getUserData/${recivedId}`,
+        `${process.env.REACT_APP_BACKEND_URL}/users/getUserData/${recivedId}`,
         requestOptions
       )
         .then((response) => {
@@ -78,7 +78,7 @@ const Messenger = ({ conversationId }) => {
       method: "GET",
     };
     await fetch(
-      `http://localhost:8080/messages/${currentChat._id}`,
+      `${process.env.REACT_APP_BACKEND_URL}/messages/${currentChat._id}`,
       requestOptions
     )
       .then((response) => {
@@ -108,7 +108,10 @@ const Messenger = ({ conversationId }) => {
     };
 
     try {
-      await fetch(`http://localhost:8080/messages/`, requestOptions)
+      await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/messages/`,
+        requestOptions
+      )
         .then((response) => {
           return response.json();
         })

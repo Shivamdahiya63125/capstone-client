@@ -13,7 +13,7 @@ const Conversation = ({ conversation, currentUser }) => {
 
     try {
       await fetch(
-        `http://localhost:8080/users/getUserData/${recivedId}`,
+        `${process.env.REACT_APP_BACKEND_URL}/users/getUserData/${recivedId}`,
         requestOptions
       )
         .then((response) => {

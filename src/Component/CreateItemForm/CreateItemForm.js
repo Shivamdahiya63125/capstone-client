@@ -72,10 +72,7 @@ const CreateItemForm = (props) => {
       body: itemFormData,
     };
 
-    await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/listing/saveItemAsDraft`,
-      requestOptions
-    )
+    await fetch("http://localhost:8080/listing/saveItemAsDraft", requestOptions)
       .then((response) => {
         return response.json();
       })
@@ -100,10 +97,7 @@ const CreateItemForm = (props) => {
       body: itemFormData,
     };
 
-    await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/listing/updateItem`,
-      requestOptions
-    )
+    await fetch("http://localhost:8080/listing/updateItem", requestOptions)
       .then((response) => {
         return response.json();
       })
