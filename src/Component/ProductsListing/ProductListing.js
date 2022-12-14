@@ -12,7 +12,7 @@ const ProductListing = () => {
       method: "GET",
     };
     await fetch(
-      "https://market-place-capstone-backend.herokuapp.com/listing/getalllisting",
+      `${REACT_APP_BACKEND_URL}/listing/getalllisting`,
       requestOptions
     )
       .then((response) => {
