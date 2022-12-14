@@ -20,7 +20,7 @@ const UserProfile = () => {
       method: "GET",
     };
     await fetch(
-      `http://localhost:8080/users/${globalUser._id}/getuserlisting/`,
+      `${process.env.REACT_APP_BACKEND_URL}/users/${globalUser._id}/getuserlisting/`,
       requestOptions
     )
       .then((response) => {

@@ -33,7 +33,7 @@ const SignUp = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(user),
       };
-      await fetch("http://13.58.147.80:8080/users/", requestOptions)
+      await fetch(`${process.env.REACT_APP_BACKEND_URL}/users/`, requestOptions)
         .then((response) => {
           console.log(response);
 

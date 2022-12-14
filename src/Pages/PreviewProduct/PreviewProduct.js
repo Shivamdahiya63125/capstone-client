@@ -38,7 +38,7 @@ const PreviewProduct = () => {
 
     // handling get request using ItemID
     await fetch(
-      `http://localhost:8080/listing/${params.productId}/${senderId}`,
+      `${process.env.REACT_APP_BACKEND_URL}/listing/${params.productId}/${senderId}`,
       requestOptions
     )
       .then((response) => {
