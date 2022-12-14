@@ -12,7 +12,7 @@ const ProductListing = () => {
       method: "GET",
     };
     await fetch(
-      `${REACT_APP_BACKEND_URL}/listing/getalllisting`,
+      `${process.env.REACT_APP_BACKEND_URL}/listing/getalllisting`,
       requestOptions
     )
       .then((response) => {
